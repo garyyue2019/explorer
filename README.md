@@ -5,7 +5,7 @@ An open source block explorer written in node.js.
 
 ### See it in action
 
-*  [List of live explorers running Iquidus](https://github.com/iquidus/explorer/wiki/Live-Explorers)
+*  [List of live explorers running Iquidus](https://github.com/garyyue2019/explorer/wiki/Live-Explorers)
 
 
 *Note: If you would like your instance mentioned here contact me*
@@ -36,7 +36,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/garyyue2019/explorer explorer
 
 ### Install node modules
 
@@ -90,9 +90,9 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
 
 *Example crontab; update index every minute and market data every 2 minutes*
 
-    */1 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
-    */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
-    */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
+    */1 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js index update > /dev/null 2>&1
+    */2 * * * * cd /path/to/explorer && /usr/bin/node scripts/sync.js market > /dev/null 2>&1
+    */5 * * * * cd /path/to/explorer && /usr/bin/node scripts/peers.js > /dev/null 2>&1
 
 ### Wallet
 
