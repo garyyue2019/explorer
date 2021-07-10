@@ -16,6 +16,13 @@ An open source block explorer written in node.js.
 *  mongodb 4.2.x
 *  *coind
 
+### Install node
+sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
+sudo apt install nodejs
+### Install mongodb
+sudo apt-get install mongodb
+
 ### Create database
 
 Enter MongoDB cli:
