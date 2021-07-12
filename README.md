@@ -56,6 +56,7 @@ Create user with read/write access:
     > db.addUser( { user: "username", pwd: "password", roles: [ "readWrite"] })
 
 ### Get the source
+   npm config set registry https://registry.npm.taobao.org
 
     git clone https://github.com/garyyue2019/explorer explorer
 
