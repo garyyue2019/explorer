@@ -23,6 +23,20 @@ sudo apt install nodejs
 ### Install mongodb
 sudo apt-get install mongodb
 
+关闭mongodb日志
+
+进入所在库，将慢查询的数字设成足够大即可，如下面设置成5万毫秒，就是说只有超过5万毫秒的才会打印日志了
+
+> db.setProfilingLevel(1,50000)
+
+{"was":0,"slowms":100,"ok":1}
+
+>db.setProfilingLevel(0)
+
+{"was":1,"slowms":50000,"ok":1}
+————————————————
+
+
 ### Create database
 
 Enter MongoDB cli:
