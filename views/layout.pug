@@ -76,7 +76,7 @@ html
   body
     - function format_unixtime(unixtime) {
       - var a = new Date(unixtime*1000);
-      - var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      - var months =['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
       - var year = a.getFullYear();
       - var month = months[a.getMonth()];
       - var date = a.getDate();
@@ -96,7 +96,7 @@ html
         - min = '0' + min
       if sec < 10
         - sec = '0' + sec
-      - var time = date + suffix + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+      - var time =  year+'年'+month+date+'日 '+hour +':'  +min+':'+ sec;
       - return time
     -  };
     - var navbarClasses = ['nav','navbar','navbar-expand-lg','fixed-top'];
