@@ -30,7 +30,7 @@ script.
         "url": '/ext/getaddresstxsajax/'+hashAddress
       },
       rowCallback: function (row, data, index) {
-        var timestamp = data[0]; //variables for better readability
+        var timestamp = Format(getDate(data[0]),"yyyy年MM月dd日 HH:mm:ss");  //variables for better readability
         var txhash = data[1]; //variables for better readability
         var out = data[2]; //variables for better readability
         var vin = data[3]; //variables for better readability
