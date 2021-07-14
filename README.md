@@ -21,7 +21,18 @@ sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
 sudo apt install nodejs
 ### Install mongodb
+
+$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
+ sudo apt update
+ 
+ sudo apt install mongodb-org=4.0.1 mongodb-org-server=4.0.1 mongodb-org-shell=4.0.1 mongodb-org-mongos=4.0.1 mongodb-org-tools=4.0.1
+ 或
 sudo apt-get install mongodb
+查看版本
+mongod --version
+对mongoDB Server的管理
+sudo systemctl enable mongod 
+sudo systemctl start mongod
 
 关闭mongodb日志
 
