@@ -16,7 +16,7 @@ An open source block explorer written in node.js.
 *  mongodb 4.2.x
 *  *coind
 
-### Install node
+### Install node https://nodejs.org/dist/v12.2.0/node-v12.2.0-x64.msi
 sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
 sudo apt install nodejs
