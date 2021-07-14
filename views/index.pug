@@ -16,6 +16,7 @@ block content
     } else {
       var displayLengthMax = setting_txPerPage;
     }
+
     $(document).ready(function(){
       var stable = $('#block-table').dataTable( {  
         autoWidth: true,      
@@ -62,12 +63,13 @@ block content
           var amount = (data[4] / 100000000).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true}); //variables for better readability
           var amountParts = amount.split('.');
           var amount = amountParts[0] + '.<span class="decimal">' + amountParts[1] + '</span>';
-          var timestamp = data[5]; //variables for better readability
+          var timestamp = Format(getDate(data[5]),"yyyy年MM月dd日 HH:mm:ss"); //.Format("yyyy-MM-dd HH:mm:ss"); //variables for better readability
+
           $("td:eq(0)", row).html('<a href="/block/' + blockhash + '">' + blockindex + '</a>');
           $("td:eq(1)", row).html('<a href="/tx/' + txhash + '">' + txhash + '</a>').addClass("d-none d-md-none d-lg-table-cell text-center");
           $("td:eq(2)", row).html(outputs).addClass("d-none d-md-none d-lg-table-cell text-center");
           $("td:eq(3)", row).html(amount);
-          $("td:eq(4)", row).html(timestamp);          
+          $("td:eq(4)", row).html(timestamp);          	 
         },
       });
       setInterval( function () {
