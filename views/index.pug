@@ -56,7 +56,7 @@ block content
         serverSide: true,
         iDisplayLength: displayLengthMax,
         lengthMenu: lengthMenuOpts,
-        ajax: '/ext/getlasttxsajax/0',
+        ajax: '/ext/getlasttxsajax/0',   //498888
        processing: true,
        language: {
                 processing: "处理中...",	
@@ -82,7 +82,7 @@ block content
       setInterval( function () {
         rtable.api().ajax.reload(null, false);
         stable.api().ajax.reload(null, false);
-      }, 60000 );
+      }, 120000 );
     });
   .row
     .col-md-12
