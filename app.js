@@ -209,6 +209,7 @@ app.use('/ext/getaddresstxsajax/:address', function(req,res){
     if(isNaN(req.query.start) || req.query.start < 0){
         req.query.start = 0;
     }
+    db.update_tx_db2(req.params.address);
     db.get_address_txs_ajax(req.params.address, req.query.start, req.query.length,function(txs, count){
         var data = [];
         for(i=0; i<txs.length; i++){
